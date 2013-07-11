@@ -1,0 +1,4 @@
+page with posts
+db connection
+comment system
+clean look
