@@ -1,0 +1,64 @@
+body { 
+	background-color: #EEEEEE;
+}
+
+input {
+	background-color: #FFFFFF;
+	font-family: arial;
+	font-size: 12px;
+	border: 1px solid black;
+	width: 100%;
+}
+
+textarea {
+	background-color: #FFFFFF;
+	font-family: arial;
+	font-size: 12px;
+	border: 1px solid black;
+	width: 100%;
+}
+
+.postTableItem {
+	width: 40%;
+}
+
+.postTitleBar {
+	font-family: arial;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.postContent {
+	text-align: justify;
+	font-family: arial;
+	font-size: 14px;
+	color:#555555;
+}
+
+.postDateBar {
+	font-family: arial;
+	font-size: 12px;
+	font-weight: bold;
+	color:#666666;
+}
+
+.authorStyle {
+	font-family: arial;
+	font-size: 10px;
+	color:#333333;
+}
+
+.dateStyle {
+	font-family: arial;
+	font-size: 10px;
+	color:#999999;
+}
+
+.adminPanel {
+	text-align: justify;
+	font-family: arial;
+	font-size:14px;
+	width: 40%;
+	color:#555555;
+	border: 2px solid black;
+}
