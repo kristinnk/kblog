@@ -19,11 +19,14 @@ class new(object):
 		newPostForm = web.form.Form(
 			web.form.Textbox('title'),
 			web.form.Textarea('content'),
-			web.form.Button('Post'),
-			web.form.Checkbox('publish')
+			web.form.Checkbox('publish'),
+			web.form.Button('Post')
 			)
 		np = newPostForm()
 		return render.admin( np )
+
+	def POST(self):
+		return "duuuude"
 
 if __name__ == "__main__": 
     app.run()

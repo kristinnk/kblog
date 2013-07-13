@@ -6,6 +6,16 @@ $def with (items)
 A developers blog.
 <br><br>
 
+<table class="linkSection">
+	<tr>
+		<td>
+			<a href="/">Blog</a> -
+			<a href="/new">New post</a>
+		</td>
+	</tr>
+</table>
+<br>
+
 $for x in items:
 	$if x.publish:
 		<table class="postTableItem">
@@ -25,7 +35,5 @@ $for x in items:
 				</td>
 			</tr>
 		</table><br>
-
-<a href="/new">New post</a>
 
 </center>

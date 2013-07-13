@@ -7,7 +7,7 @@ input {
 	font-family: arial;
 	font-size: 12px;
 	border: 1px solid black;
-	width: 100%;
+	width: 500px;
 }
 
 textarea {
@@ -15,7 +15,44 @@ textarea {
 	font-family: arial;
 	font-size: 12px;
 	border: 1px solid black;
-	width: 100%;
+	width: 500px;
+	height: 300px;
+}
+
+button {
+	border: 1px solid black;
+	background-color: #DDDDDD;
+	width: 500px;
+}
+
+a {
+	font-family: arial;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333333;
+}
+
+a:hover {
+	font-family: arial;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	font-family: arial;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333333;
+}
+
+.linkSection {
+	width: 40%;
+	border-bottom: 1px solid #555555;
+	font-family: arial;
+	font-size: 10px;
 }
 
 .postTableItem {
@@ -58,7 +95,7 @@ textarea {
 	text-align: justify;
 	font-family: arial;
 	font-size:14px;
-	width: 40%;
 	color:#555555;
-	border: 2px solid black;
+	border: 2px solid #CCCCCC;
+	border-radius: 15px;
 }
