@@ -9,8 +9,10 @@ Admin
 <table class="adminPanel">
 	<tr>
 		<td>
-			$:form.render()
-			<center><b>Note: </b>Currently set by default on author: Kiddi.</center>
+			<form action="/new" method="post">
+				$:form.render()
+				<center><b>Note: </b>Currently set by default on author: Kiddi.</center>
+			</form>
 		</td>
 	</tr>
 </table>
