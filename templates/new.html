@@ -1,0 +1,25 @@
+$def with (form)
+
+<center>
+<br>
+New
+<br>
+<br>
+
+<table class="adminPanel">
+	<tr>
+		<td>
+			<form action="/new" method="post">
+				$:form.render()
+				<center><b>Note: </b>Currently set by default on author: Kiddi.</center>
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<center><a href="/admin">Back to admin</a></center>
+		</td>
+	</tr>
+</table>
+
+</center>

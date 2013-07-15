@@ -1,20 +1,53 @@
-$def with (form)
+$def with (items, session)
 
 <center>
-<br>
-Admin
-<br>
-<br>
 
-<table class="adminPanel">
+<br>
+Admin panel.<br>
+<font size='2'>Logged in as $session.username</font>
+<br><br>
+
+<table class="linkSection">
 	<tr>
 		<td>
-			<form action="/new" method="post">
-				$:form.render()
-				<center><b>Note: </b>Currently set by default on author: Kiddi.</center>
-			</form>
+			<a href="/">Blog</a> -
+			<a href="/new">New post</a> -
+			<a href="/logout">Log out</a>
 		</td>
 	</tr>
 </table>
+<br>
+
+$for x in items:
+		<table class="postTableItem">
+			<tr>
+				<td class="adminPanel">
+				<a href="/edit/$x.id">Edit</a> - <a href="/delete/$x.id">Delete</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="postTitleBar">
+				<b>$:x.title </b>
+				</td>
+			</tr>
+			<tr>
+				<td clasS="postContent">
+				$:x.content.replace('\n','<br>')
+				</td>
+			</tr>
+			<tr>
+				<td clasS="postContent">
+				$if x.publish == 0:
+					<font color=red> Not published. </font>
+				$else:
+					<font color=blue> Published </font>
+				</td>
+			</tr>
+			<tr>
+				<td class="postDateBar">
+				<b><font class="authorStyle">$:x.author</font> - <font class="dateStyle">$:x.date</font>
+				</td>
+			</tr>
+		</table><br>
 
 </center>

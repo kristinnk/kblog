@@ -94,8 +94,16 @@ a:visited {
 .adminPanel {
 	text-align: justify;
 	font-family: arial;
-	font-size:14px;
+	font-size:10px;
 	color:#555555;
 	border: 2px solid #CCCCCC;
-	border-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.disabledInput {
+	background-color: #EEEEEE;
+	font-family: arial;
+	font-size: 12px;
+	border: 1px solid #DDDDDD;
+	width: 500px;
 }
