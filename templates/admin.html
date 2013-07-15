@@ -2,52 +2,73 @@ $def with (items, session)
 
 <center>
 
-<br>
-Admin panel.<br>
-<font size='2'>Logged in as $session.username</font>
-<br><br>
-
-<table class="linkSection">
+<table cellspacing=0 width=50%>
 	<tr>
-		<td>
-			<a href="/">Blog</a> -
-			<a href="/new">New post</a> -
-			<a href="/logout">Log out</a>
+		<td class="topBar">
+			<br>
+			<center>
+			Admin panel.<br>
+			<font size='2'>Logged in as $session.username</font>
+			</center>
+			<br>
 		</td>
 	</tr>
 </table>
-<br>
 
-$for x in items:
-		<table class="postTableItem">
-			<tr>
-				<td class="adminPanel">
-				<a href="/edit/$x.id">Edit</a> - <a href="/delete/$x.id">Delete</a>
-				</td>
-			</tr>
-			<tr>
-				<td class="postTitleBar">
-				<b>$:x.title </b>
-				</td>
-			</tr>
-			<tr>
-				<td clasS="postContent">
-				$:x.content.replace('\n','<br>')
-				</td>
-			</tr>
-			<tr>
-				<td clasS="postContent">
-				$if x.publish == 0:
-					<font color=red> Not published. </font>
-				$else:
-					<font color=blue> Published </font>
-				</td>
-			</tr>
-			<tr>
-				<td class="postDateBar">
-				<b><font class="authorStyle">$:x.author</font> - <font class="dateStyle">$:x.date</font>
-				</td>
-			</tr>
-		</table><br>
-
+<table cellspacing=0 width=50%>
+	<tr>
+		<td class="secondTopBar">
+			<center>
+				<table class="linkSection">
+					<tr>
+						<td>
+			<a href="/">Blog</a> -
+			<a href="/new">New post</a> -
+			<a href="/logout">Log out</a>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</td>
+	</tr>
+</table>
+<table  class="postTableItem">
+	<tr>
+		<td valign=top>
+		<center>
+		$for x in items:
+				<table width=90%>
+					<tr>
+						<td class="adminPanel">
+						<a href="/edit/$x.id">Edit</a> - <a href="/delete/$x.id">Delete</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="postTitleBar">
+						<b>$:x.title </b>
+						</td>
+					</tr>
+					<tr>
+						<td clasS="postContent">
+						$:x.content.replace('\n','<br>')
+						</td>
+					</tr>
+					<tr>
+						<td clasS="postContent">
+						$if x.publish == 0:
+							<font color=red> Not published. </font>
+						$else:
+							<font color=blue> Published </font>
+						</td>
+					</tr>
+					<tr>
+						<td class="postDateBar">
+						<b><font class="authorStyle">$:x.author</font> - <font class="dateStyle">$:x.date</font>
+						</td>
+					</tr>
+				</table><br>
+		</center>
+		</td>
+	</tr>
+</table>
 </center>

@@ -2,38 +2,61 @@ $def with (items)
 
 <center>
 
-<br>
-A developers blog.
-<br><br>
-
-<table class="linkSection">
+<table cellspacing=0 width=50%>
 	<tr>
-		<td>
-			<a href="/">Blog</a> -
-			<a href="/admin">Admin</a>
+		<td class="topBar">
+			<br>
+			<center>
+			A developers blog.
+			</center>
+			<br>
 		</td>
 	</tr>
 </table>
-<br>
 
-$for x in items:
-	$if x.publish:
-		<table class="postTableItem">
-			<tr>
-				<td class="postTitleBar">
-				<b>$:x.title </b>
-				</td>
-			</tr>
-			<tr>
-				<td clasS="postContent">
-				$:x.content.replace('\n','<br>')
-				</td>
-			</tr>
-			<tr>
-				<td class="postDateBar">
-				<b><font class="authorStyle">$:x.author</font> - <font class="dateStyle">$:x.date</font>
-				</td>
-			</tr>
-		</table><br>
+<table cellspacing=0 width=50%>
+	<tr>
+		<td class="secondTopBar">
+			<center>
+				<table class="linkSection">
+					<tr>
+						<td>
+							<a href="/">Blog</a> -
+							<a href="/admin">Admin</a>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</td>
+	</tr>
+</table>
+<table  class="postTableItem">
+	<tr>
+		<td valign=top>
+		<center>
+		$for x in items:
+			$if x.publish:
+				<table width=90%>
+					<tr>
+						<td class="postTitleBar">
+						<b>$:x.title </b>
+						</td>
+					</tr>
+					<tr>
+						<td clasS="postContent">
+						$:x.content.replace('\n','<br>')
+						</td>
+					</tr>
+					<tr>
+						<td class="postDateBar">
+						<b><font class="authorStyle">$:x.author</font> - <font class="dateStyle">$:x.date</font>
+						</td>
+					</tr>
+				</table><br>
+		</center>
+		</td>
+	</tr>
+</table>
+
 
 </center>
