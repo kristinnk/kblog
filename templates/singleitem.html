@@ -1,4 +1,4 @@
-$def with (items)
+$def with (item)
 
 <center>
 
@@ -34,28 +34,34 @@ $def with (items)
 	<tr>
 		<td valign=top>
 		<center>
-		$for x in items:
-			$if x.publish:
-				<table width=90%>
-					<tr>
-						<td class="postTitleBar">
-						<a href="/singlepost/$x.id">
-							<b>$:x.title </b>
-						</a>
-						</td>
-					</tr>
-					<tr>
-						<td clasS="postContent">
-						$:x.content.replace('\n','<br>')
-						</td>
-					</tr>
-					<tr>
-						<td class="postDateBar">
-						<b><font class="authorStyle">$:x.author</font> - <font class="dateStyle">$:x.date</font><br>
-						<div class="g-commentcount" data-href="/singlepost/$x.id">asdf</div>
-						</td>
-					</tr>
-				</table><br>
+		$if item.publish:
+			<table width=90%>
+				<tr>
+					<td class="postTitleBar">
+					<b>$:item.title </b>
+					</td>
+				</tr>
+				<tr>
+					<td clasS="postContent">
+					$:item.content.replace('\n','<br>')
+					</td>
+				</tr>
+				<tr>
+					<td class="postDateBar">
+					<b><font class="authorStyle">$:item.author</font> - <font class="dateStyle">$:item.date</font>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="g-comments"
+					    data-href = "/singlepost/$item.id"
+					    data-width = "440"
+					    data-first_party_property = "BLOGGER"
+					    data-view_type = "FILTERED_POSTMOD">
+					</div>
+					</td>
+				</tr>
+			</table><br>
 		</center>
 		</td>
 	</tr>
@@ -78,3 +84,4 @@ $def with (items)
 </table>
 
 </center>
+
